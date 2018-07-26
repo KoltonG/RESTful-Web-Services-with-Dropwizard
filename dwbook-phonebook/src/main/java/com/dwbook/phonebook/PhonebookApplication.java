@@ -1,7 +1,10 @@
 package com.dwbook.phonebook;
 
+import com.dwbook.phonebook.resources.ContactsResource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -35,12 +38,7 @@ public class PhonebookApplication extends Application<PhonebookConfiguration> {
      */
     @Override
     public void run(PhonebookConfiguration c, Environment e) throws Exception {
-        LOGGER.info("Method PhonebookApplication#run() called");
-
-        for (int i=0; i < c.getMessageRepetitions(); i++) {
-            System.out.println(c.getMessage());
-        }
-
-        System.out.println(c.getAdditionalMessage());
+        // Add the contacts resource to the environment
+        e.jersey().register(new ContactsResource());
     }
 }
