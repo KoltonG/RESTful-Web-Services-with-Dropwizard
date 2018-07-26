@@ -40,5 +40,7 @@ public class PhonebookApplication extends Application<PhonebookConfiguration> {
         for (int i=0; i < c.getMessageRepetitions(); i++) {
             System.out.println(c.getMessage());
         }
+
+        System.out.println(c.getAdditionalMessage());
     }
 }
