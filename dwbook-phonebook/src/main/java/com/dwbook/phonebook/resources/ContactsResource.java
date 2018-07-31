@@ -25,7 +25,8 @@ public class ContactsResource {
         // code ...
 
         return Response
-            .ok("{contact_id: " + id + ", name: \"Dummy Name\", phone: \"+0123456789\" }") // This sends back a 200
+            .ok("{\"contact_id\": " + id + ", \"name\": \"Dummy Name\", \"phone\": \"+0123456789\" }") // This sends
+                // back a 200
                 // OK status code
             .build();
     }
@@ -88,7 +89,8 @@ public class ContactsResource {
         // Code ...
 
         return Response
-            .ok("{contact_id: "+ id +", name: \""+ name +"\",phone: \""+ phone +"\" }") // This sends back a 200
+            .ok("{\"contact_id\": "+ id +", \"name\": \""+ name +"\",\"phone\": \""+ phone +"\" }") // This sends back a
+                // 200
                 // OK status code
             .build();
     }
